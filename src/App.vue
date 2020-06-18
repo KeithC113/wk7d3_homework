@@ -19,9 +19,9 @@
 
 <script>
 import {eventBus} from './main.js';
-import CountriesList from './components/CountriesList.vue';
+// import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail.vue';
-// import CountrySelector from './components/CountrySelector.vue';
+import CountrySelector from './components/CountrySelector.vue';
 
 export default {
   name: 'app',
@@ -41,9 +41,9 @@ export default {
     })
   },
   components: {
-    "countries-list": CountriesList,
+    // "countries-list": CountriesList,
     "country-detail": CountryDetail,
-    // "country-select": CountrySelector
+    "country-select": CountrySelector
   }
 }
 </script>

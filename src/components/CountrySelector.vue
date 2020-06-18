@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <select v-model="selectedCountry" v-on:change"handleChange">
+    <select v-model="selectedCountry" v-on:change="handleChange">
       <option v-for="(country, index) in countries" :country="country" :key="index">{{country.name}}</option>
     </select>
   </div>
@@ -9,16 +9,16 @@
 <script>
 import {eventBus} from '../main.js'
 export default {
-  name: 'country-select'
+  name: 'country-select',
   props: ['countries'],
   methods:{
-    handleClick(){
+    handleChange(){
       eventBus.$emit('country-selected',this.selectedCountry)
     }
   },
   data(){
     return {
-      selectedChange: null 
+      selectedChange: null
     }
   }
 }
